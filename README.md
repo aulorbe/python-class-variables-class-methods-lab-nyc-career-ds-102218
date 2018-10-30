@@ -35,22 +35,22 @@ Driver("Phoebe Heyerdahl", "Honda", "Civic")
 
 Great! Now, onto the more fun stuff. Let's create a few different instance methods that will help us answer questions like how many drivers do we currently have in our fleet? What percent of drivers drive a Toyota and of that, how many drive a Camry? Or more generally, which car make/models do our drivers drive?
 
-To do this, our class will need to have the two class varibles we mentioned earlier, `_all` and `_count`, as well as the class methods listed below:
+To do this, our class will need to have the two class variables we mentioned earlier, `_all` and `_count`, as well as the class methods listed below:
 
 > **Note:** although it is not necessary, feel free to use more class variables such as `_car_makes` or `_car_models`. Also, consider when is the best time to increment our `_count` class variable or add a new instance object to our `_all` list? It should be the last two lines in our `__init__` method after we have instantiated our instance object and instance variables.
 
 ```python
 class Person:
-    
+
     _all = []
     _count = 0
-    
+
     def __init__(self, cls, name, age):
         self.name = name
         self.age = age
         # call class method to append `self` to _all
         # call class method to increment _count by 1
-        
+
 ```
 
 
@@ -62,7 +62,7 @@ Driver.fleet_size() # returns the number of drivers in the fleet
 
 ```python
 Driver.driver_names() # returns a list of driver names as strings
-# example: ['Helga Pataki', 'Arnold Shortman','Gerald Johanssen', 
+# example: ['Helga Pataki', 'Arnold Shortman','Gerald Johanssen',
 # "Robert 'Big Bob' Pataki", 'Grandpa Phil', 'Rhonda Wellington Lloyd',
 # 'Phoebe Heyerdahl']
 ```
@@ -81,15 +81,15 @@ Driver.fleet_models() # returns a list of car models in the fleet
 
 
 ```python
-Driver.fleet_makes_count() 
-# returns a dictionary containing a histogram with the key of a car make 
+Driver.fleet_makes_count()
+# returns a dictionary containing a histogram with the key of a car make
 # pointing to the number of cars of that make in the fleet
 # example: {'Honda': 2, 'Jeep': 1, 'Kia': 1, 'Toyota': 3}
 ```
 
 
 ```python
-Driver.fleet_models_count() 
+Driver.fleet_models_count()
 # returns a list of dictionaries as histograms with the key of a car model
 # pointing to the number of cars of that model in the fleet
 # example: {'Camry': 2, 'Civic': 1, 'Grand Cherokee': 1, 'Highlander': 1, 'Pilot': 1, 'Sonata': 1}
@@ -97,7 +97,7 @@ Driver.fleet_models_count()
 
 
 ```python
-Driver.percent_of_fleet("Toyota") 
+Driver.percent_of_fleet("Toyota")
 # returns the percentage of Toyotas in the fleet
 # example: 45.857%
 ```
